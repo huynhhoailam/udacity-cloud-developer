@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: udagram-api-feed
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: udagram-api-feed
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: huynhhoailam/udagram-api-feed:v1
+        image: huynhhoailam/udagram-api-feed:v2
         ports:
         - containerPort: 8080
         env:
