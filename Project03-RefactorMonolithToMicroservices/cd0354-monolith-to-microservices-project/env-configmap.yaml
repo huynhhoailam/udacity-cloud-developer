@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+data:
+  AWS_BUCKET: arn:aws:s3:::mybucket-838581646967
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: testing
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: mypostgres.cykn2qntv6qu.us-east-1.rds.amazonaws.com
+  URL: http://10.100.86.16
