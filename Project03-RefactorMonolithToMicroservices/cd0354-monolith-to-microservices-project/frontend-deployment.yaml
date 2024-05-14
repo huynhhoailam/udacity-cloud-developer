@@ -15,6 +15,11 @@ spec:
       containers:
       - name: frontend
         image: huynhhoailam/udagram-frontend:v1
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
         ports:
         - containerPort: 8080
         env:
