@@ -9,4 +9,4 @@ data:
   JWT_SECRET: testing
   POSTGRES_DB: postgres
   POSTGRES_HOST: mypostgres.cykn2qntv6qu.us-east-1.rds.amazonaws.com
-  URL: http://10.100.58.44
+  URL: http://a85db88b30c7f418c946899a3d486d5e-1624299652.us-east-1.elb.amazonaws.com
