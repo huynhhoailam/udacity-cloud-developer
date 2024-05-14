@@ -12,11 +12,11 @@ script:
   - docker tag $DOCKER_USERNAME/udagram-api-feed $DOCKER_USERNAME/udagram-api-feed:v1
 
   - docker build -t $DOCKER_USERNAME/udagram-frontend ./Project03-RefactorMonolithToMicroservices/cd0354-monolith-to-microservices-project/udagram-frontend
-  - docker tag $DOCKER_USERNAME/udagram-frontend $DOCKER_USERNAME/udagram-frontend:v1
+  - docker tag $DOCKER_USERNAME/udagram-frontend $DOCKER_USERNAME/udagram-frontend:v2
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push $DOCKER_USERNAME/reverseproxy:v1
   - docker push $DOCKER_USERNAME/udagram-api-user:v1
   - docker push $DOCKER_USERNAME/udagram-api-feed:v1
-  - docker push $DOCKER_USERNAME/udagram-frontend:v1
+  - docker push $DOCKER_USERNAME/udagram-frontend:v2
